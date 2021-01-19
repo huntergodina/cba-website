@@ -1,6 +1,6 @@
 ---
 templateKey: index-page
-title: ChemBlend
+title: ChemBlend of America
 image: /img/jumbotron2.jpg
 heading: Great coffee with a conscience
 subheading: Support sustainable farming while enjoying a cup

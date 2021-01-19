@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby + Netlify CMS Starter',
+    title: 'ChemBlend of America',
     description:
-      'This repo contains an example business website that is built with Gatsby, and Netlify CMS.It follows the JAMstack architecture by using Git as a single source of truth, and Netlify for continuous deployment, and CDN distribution.',
+      'This repo contains a business website that is built with Gatsby, and Netlify CMS. It follows the JAMstack architecture by using Git as a single source of truth, and Netlify for continuous deployment, and CDN distribution.',
   },
   plugins: [
     {
@@ -27,6 +27,12 @@ module.exports = {
         name: 'images',
       },
     },
+    {
+      resolve: 'gatsby-plugin-sass',
+      options: {
+          indentedSyntax: true
+      },
+    },    
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     {
@@ -63,12 +69,6 @@ module.exports = {
         modulePath: `${__dirname}/src/cms/cms.js`,
       },
     },
-    {
-      resolve: 'gatsby-plugin-sass',
-      options: {
-          indentedSyntax: true
-      },
-    },    
     'gatsby-plugin-react-helmet',
     {
       resolve: 'gatsby-plugin-purgecss', // purges all unused/unreferenced css rules
