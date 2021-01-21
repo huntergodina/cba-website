@@ -39,22 +39,41 @@ export default class Index extends React.Component {
         <section className="section">
           <div className="container">
             <div className="content">
-              <h1>Contact</h1>
+              <h1>Request a Quote</h1>
+              <p>
+              Fill out this request for a Customized Quote including the What/Why and press "submit request."
+              <br/>
+              Representatives will respond to you as soon as possible. Please contact 630-521-1600 if you have any questions.
+              </p>
               <form
-                name="contact"
+                name="quote"
                 method="post"
-                action="/contact/thanks/"
+                action="/quote/thanks/"
                 data-netlify="true"
                 data-netlify-honeypot="bot-field"
                 onSubmit={this.handleSubmit}
               >
                 {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
-                <input type="hidden" name="form-name" value="contact" />
+                <input type="hidden" name="form-name" value="quote" />
                 <div hidden>
                   <label>
                     Don’t fill this out:{' '}
                     <input name="bot-field" onChange={this.handleChange} />
                   </label>
+                </div>
+                <div className="field">
+                  <label className="label" htmlFor={'whatwhy'}>
+                    What/Why:
+                  </label>
+                  <div className="control">
+                    <select id="whatwhy" name="whatwhy" className="input">
+                      <option value="manufacturing_and_blending">Manufacturing and Blending</option>
+                      <option value="warehouse_and_storage">Warehouse and Storage</option>
+                      <option value="contract_packaging">Contract Packaging</option>
+                      <option value="milling_and_grinding">Milling and Grinding</option>
+                      <option value="laboratory">Laboratory</option>
+                    </select>
+                  </div>
                 </div>
                 <div className="field">
                   <label className="label" htmlFor={'name'}>
@@ -68,6 +87,21 @@ export default class Index extends React.Component {
                       onChange={this.handleChange}
                       id={'name'}
                       required={true}
+                    />
+                  </div>
+                </div>
+                <div className="field">
+                  <label className="label" htmlFor={'companyname'}>
+                    Company name
+                  </label>
+                  <div className="control">
+                    <input
+                      className="input"
+                      type={'text'}
+                      name={'companyname'}
+                      onChange={this.handleChange}
+                      id={'companyname'}
+                      required={false}
                     />
                   </div>
                 </div>
@@ -88,7 +122,7 @@ export default class Index extends React.Component {
                 </div>
                 <div className="field">
                   <label className="label" htmlFor={'message'}>
-                    Message
+                    Chemical services needed
                   </label>
                   <div className="control">
                     <textarea

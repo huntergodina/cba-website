@@ -2,8 +2,8 @@
 templateKey: index-page
 title: ChemBlend of America
 image: /img/jumbotron2.jpg
-heading: Great coffee with a conscience
-subheading: Support sustainable farming while enjoying a cup
+heading: For all your blending needs.
+subheading: For all your blending needs.
 mainpitch:
   title: Why Kaldi
   description: >
